@@ -1,0 +1,6 @@
+C:\Users\Albert\source\repos\TameOfThrones\SummerIsComing\bin\Debug\SummerIsComing.exe.config
+C:\Users\Albert\source\repos\TameOfThrones\SummerIsComing\bin\Debug\SummerIsComing.exe
+C:\Users\Albert\source\repos\TameOfThrones\SummerIsComing\bin\Debug\SummerIsComing.pdb
+C:\Users\Albert\source\repos\TameOfThrones\SummerIsComing\obj\Debug\SummerIsComing.csproj.CoreCompileInputs.cache
+C:\Users\Albert\source\repos\TameOfThrones\SummerIsComing\obj\Debug\SummerIsComing.exe
+C:\Users\Albert\source\repos\TameOfThrones\SummerIsComing\obj\Debug\SummerIsComing.pdb
