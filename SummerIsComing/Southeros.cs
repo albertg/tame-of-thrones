@@ -7,24 +7,24 @@ using System.Threading.Tasks;
 
 namespace SummerIsComing {
     public class Southeros {
-        private List<Kingdom> _kingdoms;
+        private List<BaseKingdom> _kingdoms;
         RequestForAllegiance requestForAllegiance;
-        private Kingdom _rulingKingdom;
+        private BaseKingdom _rulingKingdom;
 
-        public Southeros(List<Kingdom> kingdoms) {
+        public Southeros(List<BaseKingdom> kingdoms) {
             requestForAllegiance = new RequestForAllegiance(handleRequestForAllegiance);
             _kingdoms = kingdoms;
-            foreach(Kingdom kingdom in _kingdoms) {
+            foreach(BaseKingdom kingdom in _kingdoms) {
                 kingdom.SetRequestForAllegianceHandler(requestForAllegiance);
             }
         }
 
-        public Kingdom GetRulingKingdom() {
+        public BaseKingdom GetRulingKingdom() {
             return _rulingKingdom;
         }
 
-        private List<Kingdom> handleRequestForAllegiance(List<string> messages, Kingdom sender) {
-            List<Kingdom> allies = new List<Kingdom>();
+        private List<BaseKingdom> handleRequestForAllegiance(List<string> messages, BaseKingdom sender) {
+            List<BaseKingdom> allies = new List<BaseKingdom>();
             foreach(string message in messages) {
                 allies.AddRange(this._kingdoms.Where(kingdom => kingdom.WillPledgeAllegiance(message)));
             }
@@ -35,5 +35,5 @@ namespace SummerIsComing {
         }
     }
 
-    public delegate List<Kingdom> RequestForAllegiance(List<string> messages, Kingdom sender);
+    public delegate List<BaseKingdom> RequestForAllegiance(List<string> messages, BaseKingdom sender);
 }

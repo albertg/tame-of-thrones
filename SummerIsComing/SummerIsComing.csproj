@@ -42,16 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstractions\Kingdom.cs" />
-    <Compile Include="AirKingdom.cs" />
-    <Compile Include="FireKingdom.cs" />
-    <Compile Include="IceKingdom.cs" />
-    <Compile Include="LandKingdom.cs" />
+    <Compile Include="Abstractions\BaseKingdom.cs" />
+    <Compile Include="Kingdom.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Southeros.cs" />
-    <Compile Include="SpaceKingdom.cs" />
-    <Compile Include="WaterKingdom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -7,15 +7,16 @@ namespace Tests {
     [TestClass]
     public class SoutherosTests {
         [TestMethod]
-        public void SoutherosHasNoRulerTest() {
-            List<Kingdom> kingdoms = new List<Kingdom>();
-            Kingdom space = new SpaceKingdom();
+        public void SoutherosHasNoRulerTest()
+        {
+            List<BaseKingdom> kingdoms = new List<BaseKingdom>();
+            BaseKingdom space = new Kingdom("Space", "Gorilla", "Shan");
             kingdoms.Add(space);
-            kingdoms.Add(new LandKingdom());
-            kingdoms.Add(new WaterKingdom());
-            kingdoms.Add(new IceKingdom());
-            kingdoms.Add(new AirKingdom());
-            kingdoms.Add(new FireKingdom());
+            kingdoms.Add(new Kingdom("Land","Panda","Land Ruler"));
+            kingdoms.Add(new Kingdom("Water", "Octopus", "Water Ruler"));
+            kingdoms.Add(new Kingdom("Ice", "Mammoth", "Ice Ruler"));
+            kingdoms.Add(new Kingdom("Air", "Owl", "Air Ruler"));
+            kingdoms.Add(new Kingdom("Fire", "Dragon", "Fire Ruler"));
 
             List<string> messages = new List<string>();
             messages.Add("111111");
@@ -29,15 +30,16 @@ namespace Tests {
         }
 
         [TestMethod]
-        public void SoutherosHasASpaceRulerTest() {
-            List<Kingdom> kingdoms = new List<Kingdom>();
-            Kingdom space = new SpaceKingdom();
+        public void SoutherosHasASpaceRulerTest()
+        {
+            List<BaseKingdom> kingdoms = new List<BaseKingdom>();
+            BaseKingdom space = new Kingdom("Space", "Gorilla", "Shan");
             kingdoms.Add(space);
-            kingdoms.Add(new LandKingdom());
-            kingdoms.Add(new WaterKingdom());
-            kingdoms.Add(new IceKingdom());
-            kingdoms.Add(new AirKingdom());
-            kingdoms.Add(new FireKingdom());
+            kingdoms.Add(new Kingdom("Land", "Panda", "Land Ruler"));
+            kingdoms.Add(new Kingdom("Water", "Octopus", "Water Ruler"));
+            kingdoms.Add(new Kingdom("Ice", "Mammoth", "Ice Ruler"));
+            kingdoms.Add(new Kingdom("Air", "Owl", "Air Ruler"));
+            kingdoms.Add(new Kingdom("Fire", "Dragon", "Fire Ruler"));
 
             List<string> messages = new List<string>();
             messages.Add("oaaawaala");

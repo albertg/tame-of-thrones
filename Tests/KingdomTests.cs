@@ -9,7 +9,7 @@ namespace Tests {
         [TestMethod]
         public void AcceptableMessageLandTest() {
             string message = "a1d22n333a4444p";
-            Kingdom land = new LandKingdom();
+            BaseKingdom land = new Kingdom("Land", "Panda", "Land Ruler");
             bool willAlly = land.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -17,7 +17,7 @@ namespace Tests {
         [TestMethod]
         public void AcceptableMessageLandAltTest() {
             string message = "dnapa";
-            Kingdom land = new LandKingdom();
+            BaseKingdom land = new Kingdom("Land", "Panda", "Land Ruler");
             bool willAlly = land.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -25,7 +25,7 @@ namespace Tests {
         [TestMethod]
         public void AcceptableMessageLandAlt2Test() {
             string message = "ppaannddaa";
-            Kingdom land = new LandKingdom();
+            BaseKingdom land = new Kingdom("Land", "Panda", "Land Ruler");
             bool willAlly = land.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -33,7 +33,7 @@ namespace Tests {
         [TestMethod]
         public void UnAcceptableLandMessageTest() {
             string message = "1112223333eeefffrrr";
-            Kingdom land = new LandKingdom();
+            BaseKingdom land = new Kingdom("Land", "Panda", "Land Ruler");
             bool willAlly = land.WillPledgeAllegiance(message);
             Assert.IsFalse(willAlly);
         }
@@ -41,15 +41,15 @@ namespace Tests {
         [TestMethod]
         public void UnAcceptableLandMessageAltTest() {
             string message = "oofffattntdffda";
-            Kingdom land = new LandKingdom();
+            BaseKingdom land = new Kingdom("Land", "Panda", "Land Ruler");
             bool willAlly = land.WillPledgeAllegiance(message);
             Assert.IsFalse(willAlly);
         }
 
-        [TestMethod]
+        [TestMethod]    
         public void AcceptableMessageIceTest() {
             string message = "Ahoy! Fight for me with men and money";
-            Kingdom ice = new IceKingdom();
+            BaseKingdom ice = new Kingdom("Ice", "Mammoth", "Ice Ruler");
             bool willAlly = ice.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -57,7 +57,7 @@ namespace Tests {
         [TestMethod]
         public void AcceptableMessageIceAltTest() {
             string message = "maomtmh";
-            Kingdom ice = new IceKingdom();
+            BaseKingdom ice = new Kingdom("Ice", "Mammoth", "Ice Ruler");
             bool willAlly = ice.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -65,7 +65,7 @@ namespace Tests {
         [TestMethod]
         public void AcceptableMessageIceAlt2Test() {
             string message = "mmaammmmootthh";
-            Kingdom ice = new IceKingdom();
+            BaseKingdom ice = new Kingdom("Ice", "Mammoth", "Ice Ruler");
             bool willAlly = ice.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -73,7 +73,7 @@ namespace Tests {
         [TestMethod]
         public void UnAcceptableIceMessageTest() {
             string message = "jurgyer";
-            Kingdom ice = new IceKingdom();
+            BaseKingdom ice = new Kingdom("Ice", "Mammoth", "Ice Ruler");
             bool willAlly = ice.WillPledgeAllegiance(message);
             Assert.IsFalse(willAlly);
         }
@@ -81,7 +81,7 @@ namespace Tests {
         [TestMethod]
         public void UnAcceptableIceMessageAltTest() {
             string message = "wwertmajtgho";
-            Kingdom ice = new IceKingdom();
+            BaseKingdom ice = new Kingdom("Ice", "Mammoth", "Ice Ruler");
             bool willAlly = ice.WillPledgeAllegiance(message);
             Assert.IsFalse(willAlly);
         }
@@ -89,7 +89,7 @@ namespace Tests {
         [TestMethod]
         public void AcceptableMessageFireTest() {
             string message = "Drag on, Martin!";
-            Kingdom fire = new FireKingdom();
+            BaseKingdom fire = new Kingdom("Fire", "Dragon", "Fire Ruler");
             bool willAlly = fire.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -97,7 +97,7 @@ namespace Tests {
         [TestMethod]
         public void AcceptableMessageFireAltTest() {
             string message = "GDORNA";
-            Kingdom fire = new FireKingdom();
+            BaseKingdom fire = new Kingdom("Fire", "Dragon", "Fire Ruler");
             bool willAlly = fire.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -105,7 +105,7 @@ namespace Tests {
         [TestMethod]
         public void AcceptableMessageFireAlt2Test() {
             string message = "ddddrrrraaaagggoon";
-            Kingdom fire = new FireKingdom();
+            BaseKingdom fire = new Kingdom("Fire", "Dragon", "Fire Ruler");
             bool willAlly = fire.WillPledgeAllegiance(message);
             Assert.IsTrue(willAlly);
         }
@@ -113,7 +113,7 @@ namespace Tests {
         [TestMethod]
         public void UnAcceptableFireMessageTest() {
             string message = "fth33489jb";
-            Kingdom fire = new FireKingdom();
+            BaseKingdom fire = new Kingdom("Fire", "Dragon", "Fire Ruler");
             bool willAlly = fire.WillPledgeAllegiance(message);
             Assert.IsFalse(willAlly);
         }
@@ -121,7 +121,7 @@ namespace Tests {
         [TestMethod]
         public void UnAcceptableFireMessageAltTest() {
             string message = "dhytrsdgmbojhn";
-            Kingdom fire = new FireKingdom();
+            BaseKingdom fire = new Kingdom("Fire", "Dragon", "Fire Ruler");
             bool willAlly = fire.WillPledgeAllegiance(message);
             Assert.IsFalse(willAlly);
         }

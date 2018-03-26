@@ -2,21 +2,40 @@
 using System.Linq;
 
 namespace SummerIsComing.Abstractions {
-    public abstract class Kingdom {
-        public abstract string GetRuler();
-        public abstract string GetName();
-        public abstract string GetEmblem();
-        public abstract void InvokeAllegiance(List<string> messages);
+    public abstract class BaseKingdom {
+        string _name;
+        string _emblem;        
+        string _ruler;
 
         private Dictionary<char, int> emblemSeq;
         protected RequestForAllegiance Handler;
-        protected List<Kingdom> Allies;
+        protected List<BaseKingdom> Allies;
 
-        public Kingdom() {
+        public string GetName()
+        {
+            return this._name;
+        }
+        public string GetEmblem()
+        {
+            return this._emblem;
+        }
+        public string GetRuler()
+        {
+            return this._ruler;
+        }
+        public void InvokeAllegiance(List<string> messages)
+        {
+            this.Allies = this.Handler(messages, this);
+        }        
+
+        public BaseKingdom(string name, string emblem, string ruler) {
+            this._name = name;
+            this._emblem = emblem;
+            this._ruler = ruler;
             identifyEmblemSequence();
         }
 
-        public List<Kingdom> GetAllies() {
+        public List<BaseKingdom> GetAllies() {
             return this.Allies;
         }
 

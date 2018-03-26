@@ -7,7 +7,6 @@ C:\Users\Albert\source\repos\TameOfThrones\SummerIsComing\obj\Debug\SummerIsComi
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\bin\Debug\SummerIsComing.exe.config
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\bin\Debug\SummerIsComing.exe
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\bin\Debug\SummerIsComing.pdb
-D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\obj\Debug\SummerIsComing.csprojResolveAssemblyReference.cache
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\obj\Debug\SummerIsComing.csproj.CoreCompileInputs.cache
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\obj\Debug\SummerIsComing.exe
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\obj\Debug\SummerIsComing.pdb
