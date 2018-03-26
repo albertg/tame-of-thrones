@@ -42,15 +42,18 @@ namespace Tests {
             kingdoms.Add(new Kingdom("Fire", "Dragon", "Fire Ruler"));
 
             List<string> messages = new List<string>();
-            messages.Add("oaaawaala");
-            messages.Add("a1d22n333a4444p");
-            messages.Add("zmzmzmzaztzozh");
+            messages.Add("Let’s swing the sword together");
+            messages.Add("Die or play the tame of thrones");
+            messages.Add("Ahoy! Fight for me with men and money");
+            messages.Add("Summer is coming");
+            messages.Add("Drag on Martin!");
 
             Southeros universe = new Southeros(kingdoms);
             space.InvokeAllegiance(messages);
 
             Assert.IsNotNull(universe.GetRulingKingdom());
             Assert.IsNotNull(universe.GetRulingKingdom().GetAllies());
+            Assert.AreEqual(4, universe.GetRulingKingdom().GetAllies().Count);
             Assert.AreSame("Space", universe.GetRulingKingdom().GetName());
             Assert.AreSame("Shan", universe.GetRulingKingdom().GetRuler());
         }

@@ -10,3 +10,4 @@ D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\bin\Debug\Summe
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\obj\Debug\SummerIsComing.csproj.CoreCompileInputs.cache
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\obj\Debug\SummerIsComing.exe
 D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\obj\Debug\SummerIsComing.pdb
+D:\Albert\Stuff\ProgrammingSkills\tame-of-thrones\SummerIsComing\obj\Debug\SummerIsComing.csprojResolveAssemblyReference.cache

@@ -46,7 +46,7 @@ namespace SummerIsComing.Abstractions {
                 processedMessageDictionary.Add(kvp.Key, message.ToLower().Split(kvp.Key).Length - 1);
             }
 
-            return emblemSeq.Where(seq => processedMessageDictionary[seq.Key] < seq.Value)
+            return emblemSeq.Where(seq => !(processedMessageDictionary[seq.Key] >= seq.Value))
                             .Count() == 0;
         }
 

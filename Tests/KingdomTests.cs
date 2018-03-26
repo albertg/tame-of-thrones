@@ -112,7 +112,7 @@ namespace Tests {
 
         [TestMethod]
         public void UnAcceptableFireMessageTest() {
-            string message = "fth33489jb";
+            string message = "Summer is coming";
             BaseKingdom fire = new Kingdom("Fire", "Dragon", "Fire Ruler");
             bool willAlly = fire.WillPledgeAllegiance(message);
             Assert.IsFalse(willAlly);
