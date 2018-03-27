@@ -57,5 +57,35 @@ namespace Tests {
             Assert.AreSame("Space", universe.GetRulingKingdom().GetName());
             Assert.AreSame("Shan", universe.GetRulingKingdom().GetRuler());
         }
+
+        //This test aims to ensure that if a kingdom has already pledged allegiance
+        //the same kingdom will not be added as an ally again if another message is acceptable to that kingdom
+        [TestMethod]
+        public void SoutherosHasARulerAndItsAlliesAreNotDuplicatedEvenIfTheSameMessageIsSentMoreThanOnceTest()
+        {
+            List<BaseKingdom> kingdoms = new List<BaseKingdom>();
+            BaseKingdom space = new Kingdom("Space", "Gorilla", "Shan");
+            kingdoms.Add(space);
+            kingdoms.Add(new Kingdom("Land", "Panda", "Land Ruler"));
+            kingdoms.Add(new Kingdom("Water", "Octopus", "Water Ruler"));
+            kingdoms.Add(new Kingdom("Ice", "Mammoth", "Ice Ruler"));
+            kingdoms.Add(new Kingdom("Air", "Owl", "Air Ruler"));
+            kingdoms.Add(new Kingdom("Fire", "Dragon", "Fire Ruler"));
+
+            List<string> messages = new List<string>();
+            messages.Add("Drag on Martin!");
+            messages.Add("Drag on Martin!");
+            messages.Add("Die or play the tame of thrones");
+            messages.Add("Ahoy! Fight for me with men and money");
+
+            Southeros universe = new Southeros(kingdoms);
+            space.InvokeAllegiance(messages);
+
+            Assert.IsNotNull(universe.GetRulingKingdom());
+            Assert.IsNotNull(universe.GetRulingKingdom().GetAllies());
+            Assert.AreEqual(3, universe.GetRulingKingdom().GetAllies().Count);
+            Assert.AreSame("Space", universe.GetRulingKingdom().GetName());
+            Assert.AreSame("Shan", universe.GetRulingKingdom().GetRuler());
+        }
     }
 }
